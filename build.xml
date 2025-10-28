@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project name="MeetingPlanner" default="test" basedir=".">
+
+    <property name="src.dir" value="src/main/java"/>
+    <property name="test.dir" value="src/test/java"/>
+    <property name="build.dir" value="build"/>
+    <property name="classes.dir" value="${build.dir}/classes"/>
+    <property name="test.classes.dir" value="${build.dir}/test-classes"/>
+    <property name="reports.dir" value="${build.dir}/reports"/>
+    <property name="javadoc.dir" value="doc"/>
+
+    <path id="classpath">
+        <pathelement location="${classes.dir}"/>
+        <fileset dir="lib">
+            <include name="**/*.jar"/>
+        </fileset>
+    </path>
+
+    <target name="clean">
+        <delete dir="${build.dir}"/>
+        <delete dir="${javadoc.dir}"/>
+    </target>
+
+    <target name="compile">
+        <mkdir dir="${classes.dir}"/>
+        <javac srcdir="${src.dir}" destdir="${classes.dir}" includeantruntime="false" debug="true">
+            <classpath refid="classpath"/>
+        </javac>
+    </target>
+
+    <target name="compile-tests" depends="compile">
+        <mkdir dir="${test.classes.dir}"/>
+        <javac srcdir="${test.dir}" destdir="${test.classes.dir}" includeantruntime="false" debug="true">
+            <classpath>
+                <path refid="classpath"/>
+                <pathelement location="${classes.dir}"/>
+                <fileset dir="lib">
+                    <include name="**/*.jar"/>
+                </fileset>
+            </classpath>
+        </javac>
+    </target>
+
+    <target name="test" depends="compile-tests">
+        <mkdir dir="${reports.dir}"/>
+
+        <java classname="org.junit.platform.console.ConsoleLauncher" fork="true" failonerror="true">
+            <classpath>
+                <path refid="classpath"/>
+                <pathelement location="${test.classes.dir}"/>
+                <pathelement location="${classes.dir}"/>
+            </classpath>
+            <arg value="--scan-classpath"/>
+            <arg value="${test.classes.dir}"/>
+            <arg value="--reports-dir=${reports.dir}"/>
+        </java>
+
+        <echo>✅ JUnit 5 tests completed — reports generated in ${reports.dir}</echo>
+    </target>
+
+    <target name="javadoc" depends="compile">
+        <mkdir dir="${javadoc.dir}"/>
+        <javadoc sourcepath="${src.dir}" destdir="${javadoc.dir}" author="true" version="true" use="true">
+            <classpath refid="classpath"/>
+        </javadoc>
+        <echo>📘 Javadoc generated in ${javadoc.dir}</echo>
+    </target>
+
+</project>

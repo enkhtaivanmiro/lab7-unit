@@ -1,0 +1,389 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="JUnit Vintage" tests="39" skipped="0" failures="8" errors="10" time="0.038" hostname="Miro" timestamp="2025-10-28T21:32:17">
+<properties>
+<property name="file.encoding" value="UTF-8"/>
+<property name="file.separator" value="\"/>
+<property name="java.class.path" value="C:\Users\Enkhtaivan\Downloads\MeetingPlanner\MeetingPlanner\build\classes;C:\Users\Enkhtaivan\Downloads\MeetingPlanner\MeetingPlanner\lib\junit-4.13.2.jar;C:\Users\Enkhtaivan\Downloads\MeetingPlanner\MeetingPlanner\lib\junit-platform-console-standalone-1.10.2.jar;C:\Users\Enkhtaivan\Downloads\MeetingPlanner\MeetingPlanner\build\test-classes"/>
+<property name="java.class.version" value="65.0"/>
+<property name="java.home" value="C:\Users\Enkhtaivan\.p2\pool\plugins\org.eclipse.justj.openjdk.hotspot.jre.full.win32.x86_64_21.0.8.v20250724-1412\jre"/>
+<property name="java.io.tmpdir" value="C:\Users\ENKHTA~1\AppData\Local\Temp\"/>
+<property name="java.library.path" value="C:\Users\Enkhtaivan\.p2\pool\plugins\org.eclipse.justj.openjdk.hotspot.jre.full.win32.x86_64_21.0.8.v20250724-1412\jre\bin;C:\Windows\Sun\Java\bin;C:\Windows\system32;C:\Windows;C:/Users/Enkhtaivan/.p2/pool/plugins/org.eclipse.justj.openjdk.hotspot.jre.full.win32.x86_64_21.0.8.v20250724-1412/jre/bin/server;C:/Users/Enkhtaivan/.p2/pool/plugins/org.eclipse.justj.openjdk.hotspot.jre.full.win32.x86_64_21.0.8.v20250724-1412/jre/bin;C:\Program Files\Common Files\Oracle\Java\javapath;C:\Windows\system32;C:\Windows;C:\Windows\System32\Wbem;C:\Windows\System32\WindowsPowerShell\v1.0\;C:\Windows\System32\OpenSSH\;C:\Program Files\Git\cmd;C:\Program Files\Microsoft VS Code\bin;C:\Program Files\NVIDIA Corporation\NVIDIA App\NvDLISR;C:\Program Files\nodejs\;C:\Program Files (x86)\NVIDIA Corporation\PhysX\Common;C:\Users\Enkhtaivan\AppData\Local\Microsoft\WindowsApps;C:\Users\Enkhtaivan\AppData\Roaming\npm;D:\Dev\flutter\bin;C:\Users\Enkhtaivan\AppData\Local\Python\bin;C:\Windows\System32;;."/>
+<property name="java.runtime.name" value="OpenJDK Runtime Environment"/>
+<property name="java.runtime.version" value="21.0.8+9-LTS"/>
+<property name="java.specification.name" value="Java Platform API Specification"/>
+<property name="java.specification.vendor" value="Oracle Corporation"/>
+<property name="java.specification.version" value="21"/>
+<property name="java.vendor" value="Eclipse Adoptium"/>
+<property name="java.vendor.url" value="https://adoptium.net/"/>
+<property name="java.vendor.url.bug" value="https://github.com/adoptium/adoptium-support/issues"/>
+<property name="java.vendor.version" value="Temurin-21.0.8+9"/>
+<property name="java.version" value="21.0.8"/>
+<property name="java.version.date" value="2025-07-15"/>
+<property name="java.vm.compressedOopsMode" value="Zero based"/>
+<property name="java.vm.info" value="mixed mode, sharing"/>
+<property name="java.vm.name" value="OpenJDK 64-Bit Server VM"/>
+<property name="java.vm.specification.name" value="Java Virtual Machine Specification"/>
+<property name="java.vm.specification.vendor" value="Oracle Corporation"/>
+<property name="java.vm.specification.version" value="21"/>
+<property name="java.vm.vendor" value="Eclipse Adoptium"/>
+<property name="java.vm.version" value="21.0.8+9-LTS"/>
+<property name="jdk.debug" value="release"/>
+<property name="line.separator" value="
+"/>
+<property name="native.encoding" value="Cp1252"/>
+<property name="os.arch" value="amd64"/>
+<property name="os.name" value="Windows 11"/>
+<property name="os.version" value="10.0"/>
+<property name="path.separator" value=";"/>
+<property name="stderr.encoding" value="Cp1252"/>
+<property name="stdout.encoding" value="Cp1252"/>
+<property name="sun.arch.data.model" value="64"/>
+<property name="sun.boot.library.path" value="C:\Users\Enkhtaivan\.p2\pool\plugins\org.eclipse.justj.openjdk.hotspot.jre.full.win32.x86_64_21.0.8.v20250724-1412\jre\bin"/>
+<property name="sun.cpu.endian" value="little"/>
+<property name="sun.cpu.isalist" value="amd64"/>
+<property name="sun.io.unicode.encoding" value="UnicodeLittle"/>
+<property name="sun.java.command" value="org.junit.platform.console.ConsoleLauncher --scan-classpath build/test-classes --reports-dir=build/reports"/>
+<property name="sun.java.launcher" value="SUN_STANDARD"/>
+<property name="sun.jnu.encoding" value="Cp1252"/>
+<property name="sun.management.compiler" value="HotSpot 64-Bit Tiered Compilers"/>
+<property name="sun.os.patch.level" value=""/>
+<property name="user.country" value="US"/>
+<property name="user.dir" value="C:\Users\Enkhtaivan\Downloads\MeetingPlanner\MeetingPlanner"/>
+<property name="user.home" value="C:\Users\Enkhtaivan"/>
+<property name="user.language" value="en"/>
+<property name="user.name" value="Enkhtaivan"/>
+<property name="user.script" value=""/>
+<property name="user.timezone" value="Asia/Shanghai"/>
+<property name="user.variant" value=""/>
+</properties>
+<testcase name="testAddMeeting_adjacentMeetings_shouldSucceed" classname="edu.sc.csce747.MeetingPlanner.CalendarTest" time="0">
+<error message="Cannot invoke &quot;String.equals(Object)&quot; because the return value of &quot;edu.sc.csce747.MeetingPlanner.Meeting.getDescription()&quot; is null" type="java.lang.NullPointerException"><![CDATA[java.lang.NullPointerException: Cannot invoke "String.equals(Object)" because the return value of "edu.sc.csce747.MeetingPlanner.Meeting.getDescription()" is null
+	at edu.sc.csce747.MeetingPlanner.Calendar.addMeeting(Calendar.java:123)
+	at edu.sc.csce747.MeetingPlanner.CalendarTest.testAddMeeting_adjacentMeetings_shouldSucceed(CalendarTest.java:497)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+]]></error>
+<system-out><![CDATA[
+unique-id: [engine:junit-vintage]/[runner:edu.sc.csce747.MeetingPlanner.CalendarTest]/[test:testAddMeeting_adjacentMeetings_shouldSucceed(edu.sc.csce747.MeetingPlanner.CalendarTest)]
+display-name: testAddMeeting_adjacentMeetings_shouldSucceed
+]]></system-out>
+</testcase>
+<testcase name="testAddMeeting_multipleMeetingsSameDay" classname="edu.sc.csce747.MeetingPlanner.CalendarTest" time="0.001">
+<error message="Cannot invoke &quot;String.equals(Object)&quot; because the return value of &quot;edu.sc.csce747.MeetingPlanner.Meeting.getDescription()&quot; is null" type="java.lang.NullPointerException"><![CDATA[java.lang.NullPointerException: Cannot invoke "String.equals(Object)" because the return value of "edu.sc.csce747.MeetingPlanner.Meeting.getDescription()" is null
+	at edu.sc.csce747.MeetingPlanner.Calendar.addMeeting(Calendar.java:123)
+	at edu.sc.csce747.MeetingPlanner.CalendarTest.testAddMeeting_multipleMeetingsSameDay(CalendarTest.java:75)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+]]></error>
+<system-out><![CDATA[
+unique-id: [engine:junit-vintage]/[runner:edu.sc.csce747.MeetingPlanner.CalendarTest]/[test:testAddMeeting_multipleMeetingsSameDay(edu.sc.csce747.MeetingPlanner.CalendarTest)]
+display-name: testAddMeeting_multipleMeetingsSameDay
+]]></system-out>
+</testcase>
+<testcase name="testAddMeeting_invalidDay_thirtytwo" classname="edu.sc.csce747.MeetingPlanner.CalendarTest" time="0">
+<system-out><![CDATA[
+unique-id: [engine:junit-vintage]/[runner:edu.sc.csce747.MeetingPlanner.CalendarTest]/[test:testAddMeeting_invalidDay_thirtytwo(edu.sc.csce747.MeetingPlanner.CalendarTest)]
+display-name: testAddMeeting_invalidDay_thirtytwo
+]]></system-out>
+</testcase>
+<testcase name="testAddMeeting_february29" classname="edu.sc.csce747.MeetingPlanner.CalendarTest" time="0">
+<failure message="February 29 should not exist in this calendar" type="java.lang.AssertionError"><![CDATA[java.lang.AssertionError: February 29 should not exist in this calendar
+	at org.junit.Assert.fail(Assert.java:89)
+	at edu.sc.csce747.MeetingPlanner.CalendarTest.testAddMeeting_february29(CalendarTest.java:247)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+]]></failure>
+<system-out><![CDATA[
+unique-id: [engine:junit-vintage]/[runner:edu.sc.csce747.MeetingPlanner.CalendarTest]/[test:testAddMeeting_february29(edu.sc.csce747.MeetingPlanner.CalendarTest)]
+display-name: testAddMeeting_february29
+]]></system-out>
+</testcase>
+<testcase name="testAddMeeting_invalidMonth_zero" classname="edu.sc.csce747.MeetingPlanner.CalendarTest" time="0">
+<system-out><![CDATA[
+unique-id: [engine:junit-vintage]/[runner:edu.sc.csce747.MeetingPlanner.CalendarTest]/[test:testAddMeeting_invalidMonth_zero(edu.sc.csce747.MeetingPlanner.CalendarTest)]
+display-name: testAddMeeting_invalidMonth_zero
+]]></system-out>
+</testcase>
+<testcase name="testAddMeeting_invalidEndTime_twentyfour" classname="edu.sc.csce747.MeetingPlanner.CalendarTest" time="0">
+<system-out><![CDATA[
+unique-id: [engine:junit-vintage]/[runner:edu.sc.csce747.MeetingPlanner.CalendarTest]/[test:testAddMeeting_invalidEndTime_twentyfour(edu.sc.csce747.MeetingPlanner.CalendarTest)]
+display-name: testAddMeeting_invalidEndTime_twentyfour
+]]></system-out>
+</testcase>
+<testcase name="testPrintAgenda_day" classname="edu.sc.csce747.MeetingPlanner.CalendarTest" time="0.004">
+<error message="Cannot invoke &quot;edu.sc.csce747.MeetingPlanner.Room.getID()&quot; because &quot;this.room&quot; is null" type="java.lang.NullPointerException"><![CDATA[java.lang.NullPointerException: Cannot invoke "edu.sc.csce747.MeetingPlanner.Room.getID()" because "this.room" is null
+	at edu.sc.csce747.MeetingPlanner.Meeting.toString(Meeting.java:103)
+	at edu.sc.csce747.MeetingPlanner.Calendar.printAgenda(Calendar.java:178)
+	at edu.sc.csce747.MeetingPlanner.CalendarTest.testPrintAgenda_day(CalendarTest.java:143)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+]]></error>
+<system-out><![CDATA[
+unique-id: [engine:junit-vintage]/[runner:edu.sc.csce747.MeetingPlanner.CalendarTest]/[test:testPrintAgenda_day(edu.sc.csce747.MeetingPlanner.CalendarTest)]
+display-name: testPrintAgenda_day
+]]></system-out>
+</testcase>
+<testcase name="testAddMeeting_february31" classname="edu.sc.csce747.MeetingPlanner.CalendarTest" time="0">
+<failure message="February 31 does not exist" type="java.lang.AssertionError"><![CDATA[java.lang.AssertionError: February 31 does not exist
+	at org.junit.Assert.fail(Assert.java:89)
+	at edu.sc.csce747.MeetingPlanner.CalendarTest.testAddMeeting_february31(CalendarTest.java:271)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+]]></failure>
+<system-out><![CDATA[
+unique-id: [engine:junit-vintage]/[runner:edu.sc.csce747.MeetingPlanner.CalendarTest]/[test:testAddMeeting_february31(edu.sc.csce747.MeetingPlanner.CalendarTest)]
+display-name: testAddMeeting_february31
+]]></system-out>
+</testcase>
+<testcase name="testAddMeeting_june31" classname="edu.sc.csce747.MeetingPlanner.CalendarTest" time="0">
+<failure message="June 31 does not exist" type="java.lang.AssertionError"><![CDATA[java.lang.AssertionError: June 31 does not exist
+	at org.junit.Assert.fail(Assert.java:89)
+	at edu.sc.csce747.MeetingPlanner.CalendarTest.testAddMeeting_june31(CalendarTest.java:295)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+]]></failure>
+<system-out><![CDATA[
+unique-id: [engine:junit-vintage]/[runner:edu.sc.csce747.MeetingPlanner.CalendarTest]/[test:testAddMeeting_june31(edu.sc.csce747.MeetingPlanner.CalendarTest)]
+display-name: testAddMeeting_june31
+]]></system-out>
+</testcase>
+<testcase name="testAddMeeting_september31" classname="edu.sc.csce747.MeetingPlanner.CalendarTest" time="0">
+<failure message="September 31 does not exist" type="java.lang.AssertionError"><![CDATA[java.lang.AssertionError: September 31 does not exist
+	at org.junit.Assert.fail(Assert.java:89)
+	at edu.sc.csce747.MeetingPlanner.CalendarTest.testAddMeeting_september31(CalendarTest.java:307)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+]]></failure>
+<system-out><![CDATA[
+unique-id: [engine:junit-vintage]/[runner:edu.sc.csce747.MeetingPlanner.CalendarTest]/[test:testAddMeeting_september31(edu.sc.csce747.MeetingPlanner.CalendarTest)]
+display-name: testAddMeeting_september31
+]]></system-out>
+</testcase>
+<testcase name="testAddMeeting_validMonth_december" classname="edu.sc.csce747.MeetingPlanner.CalendarTest" time="0.001">
+<failure message="December should be a valid month, but got exception: Month does not exist." type="java.lang.AssertionError"><![CDATA[java.lang.AssertionError: December should be a valid month, but got exception: Month does not exist.
+	at org.junit.Assert.fail(Assert.java:89)
+	at edu.sc.csce747.MeetingPlanner.CalendarTest.testAddMeeting_validMonth_december(CalendarTest.java:198)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+]]></failure>
+<system-out><![CDATA[
+unique-id: [engine:junit-vintage]/[runner:edu.sc.csce747.MeetingPlanner.CalendarTest]/[test:testAddMeeting_validMonth_december(edu.sc.csce747.MeetingPlanner.CalendarTest)]
+display-name: testAddMeeting_validMonth_december
+]]></system-out>
+</testcase>
+<testcase name="testAddMeeting_startOverlap" classname="edu.sc.csce747.MeetingPlanner.CalendarTest" time="0.001">
+<error message="Cannot invoke &quot;String.equals(Object)&quot; because the return value of &quot;edu.sc.csce747.MeetingPlanner.Meeting.getDescription()&quot; is null" type="java.lang.NullPointerException"><![CDATA[java.lang.NullPointerException: Cannot invoke "String.equals(Object)" because the return value of "edu.sc.csce747.MeetingPlanner.Meeting.getDescription()" is null
+	at edu.sc.csce747.MeetingPlanner.Calendar.addMeeting(Calendar.java:123)
+	at edu.sc.csce747.MeetingPlanner.CalendarTest.testAddMeeting_startOverlap(CalendarTest.java:437)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+]]></error>
+<system-out><![CDATA[
+unique-id: [engine:junit-vintage]/[runner:edu.sc.csce747.MeetingPlanner.CalendarTest]/[test:testAddMeeting_startOverlap(edu.sc.csce747.MeetingPlanner.CalendarTest)]
+display-name: testAddMeeting_startOverlap
+]]></system-out>
+</testcase>
+<testcase name="testAddMeeting_holiday" classname="edu.sc.csce747.MeetingPlanner.CalendarTest" time="0">
+<system-out><![CDATA[
+unique-id: [engine:junit-vintage]/[runner:edu.sc.csce747.MeetingPlanner.CalendarTest]/[test:testAddMeeting_holiday(edu.sc.csce747.MeetingPlanner.CalendarTest)]
+display-name: testAddMeeting_holiday
+]]></system-out>
+</testcase>
+<testcase name="testAddMeeting_invalidMonth_negative" classname="edu.sc.csce747.MeetingPlanner.CalendarTest" time="0">
+<system-out><![CDATA[
+unique-id: [engine:junit-vintage]/[runner:edu.sc.csce747.MeetingPlanner.CalendarTest]/[test:testAddMeeting_invalidMonth_negative(edu.sc.csce747.MeetingPlanner.CalendarTest)]
+display-name: testAddMeeting_invalidMonth_negative
+]]></system-out>
+</testcase>
+<testcase name="testRemoveMeeting" classname="edu.sc.csce747.MeetingPlanner.CalendarTest" time="0.001">
+<system-out><![CDATA[
+unique-id: [engine:junit-vintage]/[runner:edu.sc.csce747.MeetingPlanner.CalendarTest]/[test:testRemoveMeeting(edu.sc.csce747.MeetingPlanner.CalendarTest)]
+display-name: testRemoveMeeting
+]]></system-out>
+</testcase>
+<testcase name="testAddMeeting_startEqualsEnd" classname="edu.sc.csce747.MeetingPlanner.CalendarTest" time="0">
+<system-out><![CDATA[
+unique-id: [engine:junit-vintage]/[runner:edu.sc.csce747.MeetingPlanner.CalendarTest]/[test:testAddMeeting_startEqualsEnd(edu.sc.csce747.MeetingPlanner.CalendarTest)]
+display-name: testAddMeeting_startEqualsEnd
+]]></system-out>
+</testcase>
+<testcase name="testAddMeeting_invalidMonth_thirteen" classname="edu.sc.csce747.MeetingPlanner.CalendarTest" time="0">
+<system-out><![CDATA[
+unique-id: [engine:junit-vintage]/[runner:edu.sc.csce747.MeetingPlanner.CalendarTest]/[test:testAddMeeting_invalidMonth_thirteen(edu.sc.csce747.MeetingPlanner.CalendarTest)]
+display-name: testAddMeeting_invalidMonth_thirteen
+]]></system-out>
+</testcase>
+<testcase name="testAddMeeting_containsAnother" classname="edu.sc.csce747.MeetingPlanner.CalendarTest" time="0.001">
+<error message="Cannot invoke &quot;String.equals(Object)&quot; because the return value of &quot;edu.sc.csce747.MeetingPlanner.Meeting.getDescription()&quot; is null" type="java.lang.NullPointerException"><![CDATA[java.lang.NullPointerException: Cannot invoke "String.equals(Object)" because the return value of "edu.sc.csce747.MeetingPlanner.Meeting.getDescription()" is null
+	at edu.sc.csce747.MeetingPlanner.Calendar.addMeeting(Calendar.java:123)
+	at edu.sc.csce747.MeetingPlanner.CalendarTest.testAddMeeting_containsAnother(CalendarTest.java:482)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+]]></error>
+<system-out><![CDATA[
+unique-id: [engine:junit-vintage]/[runner:edu.sc.csce747.MeetingPlanner.CalendarTest]/[test:testAddMeeting_containsAnother(edu.sc.csce747.MeetingPlanner.CalendarTest)]
+display-name: testAddMeeting_containsAnother
+]]></system-out>
+</testcase>
+<testcase name="testAddMeeting_validMeeting" classname="edu.sc.csce747.MeetingPlanner.CalendarTest" time="0">
+<system-out><![CDATA[
+unique-id: [engine:junit-vintage]/[runner:edu.sc.csce747.MeetingPlanner.CalendarTest]/[test:testAddMeeting_validMeeting(edu.sc.csce747.MeetingPlanner.CalendarTest)]
+display-name: testAddMeeting_validMeeting
+]]></system-out>
+</testcase>
+<testcase name="testAddMeeting_invalidDay_negative" classname="edu.sc.csce747.MeetingPlanner.CalendarTest" time="0">
+<system-out><![CDATA[
+unique-id: [engine:junit-vintage]/[runner:edu.sc.csce747.MeetingPlanner.CalendarTest]/[test:testAddMeeting_invalidDay_negative(edu.sc.csce747.MeetingPlanner.CalendarTest)]
+display-name: testAddMeeting_invalidDay_negative
+]]></system-out>
+</testcase>
+<testcase name="testAddMeeting_november31" classname="edu.sc.csce747.MeetingPlanner.CalendarTest" time="0.005">
+<failure message="November 31 does not exist" type="java.lang.AssertionError"><![CDATA[java.lang.AssertionError: November 31 does not exist
+	at org.junit.Assert.fail(Assert.java:89)
+	at edu.sc.csce747.MeetingPlanner.CalendarTest.testAddMeeting_november31(CalendarTest.java:332)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+]]></failure>
+<system-out><![CDATA[
+unique-id: [engine:junit-vintage]/[runner:edu.sc.csce747.MeetingPlanner.CalendarTest]/[test:testAddMeeting_november31(edu.sc.csce747.MeetingPlanner.CalendarTest)]
+display-name: testAddMeeting_november31
+]]></system-out>
+</testcase>
+<testcase name="testClearSchedule" classname="edu.sc.csce747.MeetingPlanner.CalendarTest" time="0">
+<error message="Cannot invoke &quot;String.equals(Object)&quot; because the return value of &quot;edu.sc.csce747.MeetingPlanner.Meeting.getDescription()&quot; is null" type="java.lang.NullPointerException"><![CDATA[java.lang.NullPointerException: Cannot invoke "String.equals(Object)" because the return value of "edu.sc.csce747.MeetingPlanner.Meeting.getDescription()" is null
+	at edu.sc.csce747.MeetingPlanner.Calendar.addMeeting(Calendar.java:123)
+	at edu.sc.csce747.MeetingPlanner.CalendarTest.testClearSchedule(CalendarTest.java:115)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+]]></error>
+<system-out><![CDATA[
+unique-id: [engine:junit-vintage]/[runner:edu.sc.csce747.MeetingPlanner.CalendarTest]/[test:testClearSchedule(edu.sc.csce747.MeetingPlanner.CalendarTest)]
+display-name: testClearSchedule
+]]></system-out>
+</testcase>
+<testcase name="testIsBusy_whenBusy" classname="edu.sc.csce747.MeetingPlanner.CalendarTest" time="0">
+<system-out><![CDATA[
+unique-id: [engine:junit-vintage]/[runner:edu.sc.csce747.MeetingPlanner.CalendarTest]/[test:testIsBusy_whenBusy(edu.sc.csce747.MeetingPlanner.CalendarTest)]
+display-name: testIsBusy_whenBusy
+]]></system-out>
+</testcase>
+<testcase name="testAddMeeting_lateNight" classname="edu.sc.csce747.MeetingPlanner.CalendarTest" time="0">
+<system-out><![CDATA[
+unique-id: [engine:junit-vintage]/[runner:edu.sc.csce747.MeetingPlanner.CalendarTest]/[test:testAddMeeting_lateNight(edu.sc.csce747.MeetingPlanner.CalendarTest)]
+display-name: testAddMeeting_lateNight
+]]></system-out>
+</testcase>
+<testcase name="testAddMeeting_containedInside" classname="edu.sc.csce747.MeetingPlanner.CalendarTest" time="0">
+<error message="Cannot invoke &quot;String.equals(Object)&quot; because the return value of &quot;edu.sc.csce747.MeetingPlanner.Meeting.getDescription()&quot; is null" type="java.lang.NullPointerException"><![CDATA[java.lang.NullPointerException: Cannot invoke "String.equals(Object)" because the return value of "edu.sc.csce747.MeetingPlanner.Meeting.getDescription()" is null
+	at edu.sc.csce747.MeetingPlanner.Calendar.addMeeting(Calendar.java:123)
+	at edu.sc.csce747.MeetingPlanner.CalendarTest.testAddMeeting_containedInside(CalendarTest.java:467)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+]]></error>
+<system-out><![CDATA[
+unique-id: [engine:junit-vintage]/[runner:edu.sc.csce747.MeetingPlanner.CalendarTest]/[test:testAddMeeting_containedInside(edu.sc.csce747.MeetingPlanner.CalendarTest)]
+display-name: testAddMeeting_containedInside
+]]></system-out>
+</testcase>
+<testcase name="testAddMeeting_april31" classname="edu.sc.csce747.MeetingPlanner.CalendarTest" time="0">
+<failure message="April 31 does not exist" type="java.lang.AssertionError"><![CDATA[java.lang.AssertionError: April 31 does not exist
+	at org.junit.Assert.fail(Assert.java:89)
+	at edu.sc.csce747.MeetingPlanner.CalendarTest.testAddMeeting_april31(CalendarTest.java:283)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+]]></failure>
+<system-out><![CDATA[
+unique-id: [engine:junit-vintage]/[runner:edu.sc.csce747.MeetingPlanner.CalendarTest]/[test:testAddMeeting_april31(edu.sc.csce747.MeetingPlanner.CalendarTest)]
+display-name: testAddMeeting_april31
+]]></system-out>
+</testcase>
+<testcase name="testAddMeeting_startAfterEnd" classname="edu.sc.csce747.MeetingPlanner.CalendarTest" time="0.001">
+<system-out><![CDATA[
+unique-id: [engine:junit-vintage]/[runner:edu.sc.csce747.MeetingPlanner.CalendarTest]/[test:testAddMeeting_startAfterEnd(edu.sc.csce747.MeetingPlanner.CalendarTest)]
+display-name: testAddMeeting_startAfterEnd
+]]></system-out>
+</testcase>
+<testcase name="testAddMeeting_invalidDay_zero" classname="edu.sc.csce747.MeetingPlanner.CalendarTest" time="0">
+<system-out><![CDATA[
+unique-id: [engine:junit-vintage]/[runner:edu.sc.csce747.MeetingPlanner.CalendarTest]/[test:testAddMeeting_invalidDay_zero(edu.sc.csce747.MeetingPlanner.CalendarTest)]
+display-name: testAddMeeting_invalidDay_zero
+]]></system-out>
+</testcase>
+<testcase name="testAddMeeting_february30" classname="edu.sc.csce747.MeetingPlanner.CalendarTest" time="0.001">
+<failure message="February 30 does not exist" type="java.lang.AssertionError"><![CDATA[java.lang.AssertionError: February 30 does not exist
+	at org.junit.Assert.fail(Assert.java:89)
+	at edu.sc.csce747.MeetingPlanner.CalendarTest.testAddMeeting_february30(CalendarTest.java:259)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+]]></failure>
+<system-out><![CDATA[
+unique-id: [engine:junit-vintage]/[runner:edu.sc.csce747.MeetingPlanner.CalendarTest]/[test:testAddMeeting_february30(edu.sc.csce747.MeetingPlanner.CalendarTest)]
+display-name: testAddMeeting_february30
+]]></system-out>
+</testcase>
+<testcase name="testIsBusy_whenFree" classname="edu.sc.csce747.MeetingPlanner.CalendarTest" time="0">
+<system-out><![CDATA[
+unique-id: [engine:junit-vintage]/[runner:edu.sc.csce747.MeetingPlanner.CalendarTest]/[test:testIsBusy_whenFree(edu.sc.csce747.MeetingPlanner.CalendarTest)]
+display-name: testIsBusy_whenFree
+]]></system-out>
+</testcase>
+<testcase name="testGetMeeting" classname="edu.sc.csce747.MeetingPlanner.CalendarTest" time="0">
+<system-out><![CDATA[
+unique-id: [engine:junit-vintage]/[runner:edu.sc.csce747.MeetingPlanner.CalendarTest]/[test:testGetMeeting(edu.sc.csce747.MeetingPlanner.CalendarTest)]
+display-name: testGetMeeting
+]]></system-out>
+</testcase>
+<testcase name="testAddMeeting_exactOverlap" classname="edu.sc.csce747.MeetingPlanner.CalendarTest" time="0">
+<error message="Cannot invoke &quot;String.equals(Object)&quot; because the return value of &quot;edu.sc.csce747.MeetingPlanner.Meeting.getDescription()&quot; is null" type="java.lang.NullPointerException"><![CDATA[java.lang.NullPointerException: Cannot invoke "String.equals(Object)" because the return value of "edu.sc.csce747.MeetingPlanner.Meeting.getDescription()" is null
+	at edu.sc.csce747.MeetingPlanner.Calendar.addMeeting(Calendar.java:123)
+	at edu.sc.csce747.MeetingPlanner.CalendarTest.testAddMeeting_exactOverlap(CalendarTest.java:422)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+]]></error>
+<system-out><![CDATA[
+unique-id: [engine:junit-vintage]/[runner:edu.sc.csce747.MeetingPlanner.CalendarTest]/[test:testAddMeeting_exactOverlap(edu.sc.csce747.MeetingPlanner.CalendarTest)]
+display-name: testAddMeeting_exactOverlap
+]]></system-out>
+</testcase>
+<testcase name="testAddMeeting_endOverlap" classname="edu.sc.csce747.MeetingPlanner.CalendarTest" time="0">
+<error message="Cannot invoke &quot;String.equals(Object)&quot; because the return value of &quot;edu.sc.csce747.MeetingPlanner.Meeting.getDescription()&quot; is null" type="java.lang.NullPointerException"><![CDATA[java.lang.NullPointerException: Cannot invoke "String.equals(Object)" because the return value of "edu.sc.csce747.MeetingPlanner.Meeting.getDescription()" is null
+	at edu.sc.csce747.MeetingPlanner.Calendar.addMeeting(Calendar.java:123)
+	at edu.sc.csce747.MeetingPlanner.CalendarTest.testAddMeeting_endOverlap(CalendarTest.java:452)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+]]></error>
+<system-out><![CDATA[
+unique-id: [engine:junit-vintage]/[runner:edu.sc.csce747.MeetingPlanner.CalendarTest]/[test:testAddMeeting_endOverlap(edu.sc.csce747.MeetingPlanner.CalendarTest)]
+display-name: testAddMeeting_endOverlap
+]]></system-out>
+</testcase>
+<testcase name="testAddMeeting_invalidEndTime_negative" classname="edu.sc.csce747.MeetingPlanner.CalendarTest" time="0">
+<system-out><![CDATA[
+unique-id: [engine:junit-vintage]/[runner:edu.sc.csce747.MeetingPlanner.CalendarTest]/[test:testAddMeeting_invalidEndTime_negative(edu.sc.csce747.MeetingPlanner.CalendarTest)]
+display-name: testAddMeeting_invalidEndTime_negative
+]]></system-out>
+</testcase>
+<testcase name="testAddMeeting_november30_shouldBeValid" classname="edu.sc.csce747.MeetingPlanner.CalendarTest" time="0.001">
+<system-out><![CDATA[
+unique-id: [engine:junit-vintage]/[runner:edu.sc.csce747.MeetingPlanner.CalendarTest]/[test:testAddMeeting_november30_shouldBeValid(edu.sc.csce747.MeetingPlanner.CalendarTest)]
+display-name: testAddMeeting_november30_shouldBeValid
+]]></system-out>
+</testcase>
+<testcase name="testAddMeeting_invalidStartTime_negative" classname="edu.sc.csce747.MeetingPlanner.CalendarTest" time="0">
+<system-out><![CDATA[
+unique-id: [engine:junit-vintage]/[runner:edu.sc.csce747.MeetingPlanner.CalendarTest]/[test:testAddMeeting_invalidStartTime_negative(edu.sc.csce747.MeetingPlanner.CalendarTest)]
+display-name: testAddMeeting_invalidStartTime_negative
+]]></system-out>
+</testcase>
+<testcase name="testAddMeeting_invalidStartTime_twentyfour" classname="edu.sc.csce747.MeetingPlanner.CalendarTest" time="0">
+<system-out><![CDATA[
+unique-id: [engine:junit-vintage]/[runner:edu.sc.csce747.MeetingPlanner.CalendarTest]/[test:testAddMeeting_invalidStartTime_twentyfour(edu.sc.csce747.MeetingPlanner.CalendarTest)]
+display-name: testAddMeeting_invalidStartTime_twentyfour
+]]></system-out>
+</testcase>
+<testcase name="testPrintAgenda_month" classname="edu.sc.csce747.MeetingPlanner.CalendarTest" time="0.003">
+<error message="Cannot invoke &quot;edu.sc.csce747.MeetingPlanner.Room.getID()&quot; because &quot;this.room&quot; is null" type="java.lang.NullPointerException"><![CDATA[java.lang.NullPointerException: Cannot invoke "edu.sc.csce747.MeetingPlanner.Room.getID()" because "this.room" is null
+	at edu.sc.csce747.MeetingPlanner.Meeting.toString(Meeting.java:103)
+	at edu.sc.csce747.MeetingPlanner.Calendar.printAgenda(Calendar.java:162)
+	at edu.sc.csce747.MeetingPlanner.CalendarTest.testPrintAgenda_month(CalendarTest.java:130)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+]]></error>
+<system-out><![CDATA[
+unique-id: [engine:junit-vintage]/[runner:edu.sc.csce747.MeetingPlanner.CalendarTest]/[test:testPrintAgenda_month(edu.sc.csce747.MeetingPlanner.CalendarTest)]
+display-name: testPrintAgenda_month
+]]></system-out>
+</testcase>
+<testcase name="testAddMeeting_earlyMorning" classname="edu.sc.csce747.MeetingPlanner.CalendarTest" time="0">
+<system-out><![CDATA[
+unique-id: [engine:junit-vintage]/[runner:edu.sc.csce747.MeetingPlanner.CalendarTest]/[test:testAddMeeting_earlyMorning(edu.sc.csce747.MeetingPlanner.CalendarTest)]
+display-name: testAddMeeting_earlyMorning
+]]></system-out>
+</testcase>
+<system-out><![CDATA[
+unique-id: [engine:junit-vintage]
+display-name: JUnit Vintage
+]]></system-out>
+</testsuite>
